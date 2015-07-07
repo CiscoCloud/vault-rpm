@@ -1,6 +1,6 @@
 Name:           vault
 Version:        0.1.2
-Release:        1%{?dist}
+Release:        3%{?dist}
 Summary:        A tool for managing secrets
 
 Group:          System Environment/Daemons
@@ -8,6 +8,13 @@ License:        MPLv2.0
 URL:            http://www.vaultproject.io
 Source0:        https://dl.bintray.com/mitchellh/%{name}/%{name}_%{version}_linux_amd64.zip
 Source1:        %{name}.service
+Source2:	vault-bootstrap.sh
+Source3:	vault-unseal.sh
+Source4:	vault-health-check.sh
+Source5:	vault-register-with-consul.sh
+requires:	consul-utils, jq
+
+%global scriptdir /usr/local/bin
 
 %if 0%{?fedora} >= 14 || 0%{?rhel} >= 7
 BuildRequires:  systemd-units
@@ -23,8 +30,16 @@ A tool for managing secrets
 
 %install
 mkdir -p %{buildroot}/%{_bindir}
+mkdir -p %{buildroot}/%{scriptdir}
 cp vault %{buildroot}/%{_bindir}
+cp %{SOURCE2} %{buildroot}/%{scriptdir}
+cp %{SOURCE3} %{buildroot}/%{scriptdir}
+cp %{SOURCE4} %{buildroot}/%{scriptdir}
+cp %{SOURCE5} %{buildroot}/%{scriptdir}
 mkdir -p %{buildroot}/%{_sysconfdir}/%{name}
+mkdir -p %{buildroot}/%{_sysconfdir}/%{name}/ssl
+mkdir -p %{buildroot}/%{_sysconfdir}/%{name}/policies
+
 
 %if 0%{?fedora} >= 14 || 0%{?rhel} >= 7
 mkdir -p %{buildroot}/%{_unitdir}
@@ -49,10 +64,16 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %dir %attr(750, root, root) %{_sysconfdir}/%{name}
+%dir %attr(700, root, root) %{_sysconfdir}/%{name}/ssl
+%dir %attr(700, root, root) %{_sysconfdir}/%{name}/policies
 %if 0%{?fedora} >= 14 || 0%{?rhel} >= 7
 %{_unitdir}/%{name}.service
 %endif
 %attr(755, root, root) %{_bindir}/vault
+%attr(700, root, root) %{scriptdir}/vault-bootstrap.sh
+%attr(700, root, root) %{scriptdir}/vault-unseal.sh
+%attr(700, root, root) %{scriptdir}/vault-register-with-consul.sh
+%attr(755, root, root) %{scriptdir}/vault-health-check.sh
 
 %doc
 

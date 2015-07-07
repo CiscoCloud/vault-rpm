@@ -9,7 +9,7 @@ RestartSec=20
 TimeoutStartSec=2
 
 ExecStart=/usr/bin/vault server -config=/etc/vault/vault.config
-ExecStartPost=-/bin/bash -c "[ -f /etc/vault/vault.unseal ] && /etc/vault/vault.unseal"
+ExecStartPost=-/bin/bash -c "[ -f /usr/local/bin/vault-unseal.sh ] && /usr/local/bin/vault-unseal.sh"
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGINT
 
