@@ -12,7 +12,7 @@ Source2:	vault-bootstrap.sh
 Source3:	vault-unseal.sh
 Source4:	vault-health-check.sh
 Source5:	vault-register-with-consul.sh
-requires:	consul, jq
+requires:	consul-cli, jq
 
 %global scriptdir /usr/local/bin
 
@@ -78,8 +78,7 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Thu Apr 2 2015 Chris <Chris.Aubuchon@gmail.com>
-* updated to 0.1.2
 * Tue Aug 30 2016 Jan <jkapellen@gmail.com>
 * updated to 0.6.1
-* removed cli dependency
+* Thu Apr 2 2015 Chris <Chris.Aubuchon@gmail.com>
+* updated to 0.1.2
