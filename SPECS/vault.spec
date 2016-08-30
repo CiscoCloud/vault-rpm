@@ -12,7 +12,7 @@ Source2:	vault-bootstrap.sh
 Source3:	vault-unseal.sh
 Source4:	vault-health-check.sh
 Source5:	vault-register-with-consul.sh
-requires:	consul-cli, jq
+requires:	consul-utils, jq
 
 %global scriptdir /usr/local/bin
 
