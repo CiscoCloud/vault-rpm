@@ -6,7 +6,7 @@ Summary:        A tool for managing secrets
 Group:          System Environment/Daemons
 License:        MPLv2.0
 URL:            http://www.vaultproject.io
-Source0:        https://dl.bintray.com/mitchellh/%{name}/%{name}_%{version}_linux_amd64.zip
+Source0:        https://releases.hashicorp.com/%{name}/%{version}/%{name}_%{version}_linux_amd64.zip
 Source1:        %{name}.service
 Source2:	vault-bootstrap.sh
 Source3:	vault-unseal.sh
