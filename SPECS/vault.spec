@@ -1,6 +1,6 @@
 Name:           vault
 Version:        0.6.1
-Release:        3%{?dist}
+Release:        1%{?dist}
 Summary:        A tool for managing secrets
 
 Group:          System Environment/Daemons

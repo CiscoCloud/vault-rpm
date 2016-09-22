@@ -1,6 +1,6 @@
 Name:           vault-ssh-helper
 Version:        0.1.2
-Release:        3%{?dist}
+Release:        1%{?dist}
 Summary:        A tool for managing secrets
 
 Group:          System Environment/Daemons
