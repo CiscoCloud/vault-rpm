@@ -1,5 +1,5 @@
 Name:           vault
-Version:        0.6.1
+Version:        0.6.5
 Release:        1%{?dist}
 Summary:        A tool for managing secrets
 
@@ -14,7 +14,7 @@ Source0:        https://releases.hashicorp.com/%{name}/%{version}/%{name}_%{vers
 A tool for managing secrets
 
 %prep
-%setup -T -q -c -b 0 
+%setup -T -q -c -b 0
 
 %install
 mkdir -p %{buildroot}/%{_bindir}
