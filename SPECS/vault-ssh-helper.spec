@@ -1,5 +1,5 @@
-Name:           vault
-Version:        0.7.0
+Name:           vault-ssh-helper
+Version:        0.1.3
 Release:        1%{?dist}
 Summary:        A tool for managing secrets
 
@@ -19,7 +19,7 @@ A tool for managing secrets
 %install
 mkdir -p %{buildroot}/%{_bindir}
 mkdir -p %{buildroot}/%{scriptdir}
-cp vault %{buildroot}/%{_bindir}
+cp vault-ssh-helper %{buildroot}/%{_bindir}
 
 %post
 
@@ -31,8 +31,8 @@ cp vault %{buildroot}/%{_bindir}
 rm -rf %{buildroot}
 
 %files
-%attr(755, root, root) %{_bindir}/vault
-%{_bindir}/vault
+%attr(755, root, root) %{_bindir}/vault-ssh-helper
+%{_bindir}/vault-ssh-helper
 
 %doc
 
