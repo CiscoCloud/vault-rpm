@@ -39,7 +39,7 @@ rm -rf %{buildroot}
 
 %changelog
 * Tue Sep 26 2017 Brian Lieberman <blieberman@gannett.com>
-* Bump to 0.8.3
-*
+- Bump to 0.8.3
+
 * Wed Sep 21 2016 Hema Shivakumar <hshivakuma@gannett.com>
-* Initial version
+- Initial version
