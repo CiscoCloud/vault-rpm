@@ -1,5 +1,5 @@
-Name:           vault
-Version:        0.9.3
+Name:           vault-ssh-helper
+Version:        0.1.4
 Release:        1%{?dist}
 Summary:        A tool for managing secrets
 
@@ -19,7 +19,7 @@ A tool for managing secrets
 %install
 mkdir -p %{buildroot}/%{_bindir}
 mkdir -p %{buildroot}/%{scriptdir}
-cp vault %{buildroot}/%{_bindir}
+cp vault-ssh-helper %{buildroot}/%{_bindir}
 
 %post
 
@@ -31,18 +31,15 @@ cp vault %{buildroot}/%{_bindir}
 rm -rf %{buildroot}
 
 %files
-%attr(755, root, root) %{_bindir}/vault
-%{_bindir}/vault
+%attr(755, root, root) %{_bindir}/vault-ssh-helper
+%{_bindir}/vault-ssh-helper
 
 %doc
 
 
 %changelog
 * Thu Mar 8 2018 Michael Dunton <mdunton@gannett.com>
-- Bump to 0.9.3
-
-* Tue Sep 26 2017 Brian Lieberman <blieberman@gannett.com>
-- Bump to 0.8.3
+- Bump to 0.1.4
 
 * Wed Sep 21 2016 Hema Shivakumar <hshivakuma@gannett.com>
-- Initial version
+* Initial version
