@@ -1,5 +1,5 @@
 Name:           vault-ssh-helper
-Version:        0.1.3
+Version:        0.1.4
 Release:        1%{?dist}
 Summary:        A tool for managing secrets
 
@@ -38,5 +38,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Mar 8 2018 Michael Dunton <mdunton@gannett.com>
+- Bump to 0.1.4
+
 * Wed Sep 21 2016 Hema Shivakumar <hshivakuma@gannett.com>
 * Initial version
