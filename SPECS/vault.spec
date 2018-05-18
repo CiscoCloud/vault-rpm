@@ -1,5 +1,5 @@
 Name:           vault
-Version:        0.9.5
+Version:        0.10.1
 Release:        1%{?dist}
 Summary:        A tool for managing secrets
 
@@ -38,6 +38,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri May 18 2018 Ron Lipke <rlipke@gannett.com>
+- Bump to 0.10.1
+
 * Thu Mar 9 2018 Michael Dunton <mdunton@gannett.com>
 - Bump to 0.9.5
 
