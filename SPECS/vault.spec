@@ -38,7 +38,7 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Tue June 19 2018 Alex Greco <alex.g@gannett.com>
+* Tue Jun 19 2018 Alex Greco <alex.g@gannett.com>
 - Bump to 0.10.2
 
 * Fri May 18 2018 Ron Lipke <rlipke@gannett.com>
