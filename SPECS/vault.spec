@@ -1,5 +1,5 @@
 Name:           vault
-Version:        0.10.3
+Version:        0.10.2
 Release:        1%{?dist}
 Summary:        A tool for managing secrets
 
